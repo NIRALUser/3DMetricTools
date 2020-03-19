@@ -106,5 +106,6 @@ endif()
 #-----------------------------------------------------------------------------
 if( ${EXTENSION_NAME}_BUILD_SLICER_EXTENSION )
   set(CPACK_INSTALL_CMAKE_PROJECTS "${CPACK_INSTALL_CMAKE_PROJECTS};${CMAKE_BINARY_DIR};${EXTENSION_NAME};ALL;/")
+  include(${Slicer_EXTENSION_GENERATE_CONFIG})
   include(${Slicer_EXTENSION_CPACK})
 endif()
