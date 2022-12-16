@@ -337,11 +337,12 @@ int main( int argc , char* argv[] )
     {
         return 1 ;
     }
-    if( TriangulateAndClean( inPolyData1 ) )
+    bool clean = distanceType != "corresponding_point_to_point";
+    if( clean && TriangulateAndClean( inPolyData1 ) )
     {
         return EXIT_FAILURE ;
     }
-    if( TriangulateAndClean( inPolyData2 ) )
+    if( clean && TriangulateAndClean( inPolyData2 ) )
     {
         return EXIT_FAILURE ;
     }
